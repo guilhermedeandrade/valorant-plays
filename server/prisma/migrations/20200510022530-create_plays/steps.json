@@ -1,0 +1,245 @@
+{
+  "version": "0.3.14-fixed",
+  "steps": [
+    {
+      "tag": "CreateEnum",
+      "enum": "Agent",
+      "values": [
+        "Sova",
+        "Viper",
+        "Sage",
+        "Jett",
+        "Cypher",
+        "Brimstone",
+        "Breach",
+        "Phoenix",
+        "Omen",
+        "Raze"
+      ]
+    },
+    {
+      "tag": "CreateEnum",
+      "enum": "Map",
+      "values": [
+        "Bind",
+        "Split",
+        "Haven"
+      ]
+    },
+    {
+      "tag": "CreateEnum",
+      "enum": "Usage",
+      "values": [
+        "Offensive",
+        "Defensive",
+        "Retake"
+      ]
+    },
+    {
+      "tag": "CreateModel",
+      "model": "Play"
+    },
+    {
+      "tag": "CreateField",
+      "model": "Play",
+      "field": "id",
+      "type": "String",
+      "arity": "Required"
+    },
+    {
+      "tag": "CreateDirective",
+      "location": {
+        "path": {
+          "tag": "Field",
+          "model": "Play",
+          "field": "id"
+        },
+        "directive": "id"
+      }
+    },
+    {
+      "tag": "CreateDirective",
+      "location": {
+        "path": {
+          "tag": "Field",
+          "model": "Play",
+          "field": "id"
+        },
+        "directive": "default"
+      }
+    },
+    {
+      "tag": "CreateArgument",
+      "location": {
+        "tag": "Directive",
+        "path": {
+          "tag": "Field",
+          "model": "Play",
+          "field": "id"
+        },
+        "directive": "default"
+      },
+      "argument": "",
+      "value": "uuid()"
+    },
+    {
+      "tag": "CreateField",
+      "model": "Play",
+      "field": "submitter",
+      "type": "User",
+      "arity": "Required"
+    },
+    {
+      "tag": "CreateDirective",
+      "location": {
+        "path": {
+          "tag": "Field",
+          "model": "Play",
+          "field": "submitter"
+        },
+        "directive": "relation"
+      }
+    },
+    {
+      "tag": "CreateArgument",
+      "location": {
+        "tag": "Directive",
+        "path": {
+          "tag": "Field",
+          "model": "Play",
+          "field": "submitter"
+        },
+        "directive": "relation"
+      },
+      "argument": "fields",
+      "value": "[submitterId]"
+    },
+    {
+      "tag": "CreateArgument",
+      "location": {
+        "tag": "Directive",
+        "path": {
+          "tag": "Field",
+          "model": "Play",
+          "field": "submitter"
+        },
+        "directive": "relation"
+      },
+      "argument": "references",
+      "value": "[id]"
+    },
+    {
+      "tag": "CreateField",
+      "model": "Play",
+      "field": "submitterId",
+      "type": "String",
+      "arity": "Required"
+    },
+    {
+      "tag": "CreateField",
+      "model": "Play",
+      "field": "agent",
+      "type": "Agent",
+      "arity": "Required"
+    },
+    {
+      "tag": "CreateField",
+      "model": "Play",
+      "field": "map",
+      "type": "Map",
+      "arity": "Required"
+    },
+    {
+      "tag": "CreateField",
+      "model": "Play",
+      "field": "usage",
+      "type": "Usage",
+      "arity": "Required"
+    },
+    {
+      "tag": "CreateField",
+      "model": "Play",
+      "field": "title",
+      "type": "String",
+      "arity": "Required"
+    },
+    {
+      "tag": "CreateField",
+      "model": "Play",
+      "field": "description",
+      "type": "String",
+      "arity": "Optional"
+    },
+    {
+      "tag": "CreateField",
+      "model": "Play",
+      "field": "gifUrl",
+      "type": "String",
+      "arity": "Required"
+    },
+    {
+      "tag": "CreateField",
+      "model": "Play",
+      "field": "detailedImageUrl",
+      "type": "String",
+      "arity": "Required"
+    },
+    {
+      "tag": "CreateField",
+      "model": "Play",
+      "field": "createdAt",
+      "type": "DateTime",
+      "arity": "Required"
+    },
+    {
+      "tag": "CreateDirective",
+      "location": {
+        "path": {
+          "tag": "Field",
+          "model": "Play",
+          "field": "createdAt"
+        },
+        "directive": "default"
+      }
+    },
+    {
+      "tag": "CreateArgument",
+      "location": {
+        "tag": "Directive",
+        "path": {
+          "tag": "Field",
+          "model": "Play",
+          "field": "createdAt"
+        },
+        "directive": "default"
+      },
+      "argument": "",
+      "value": "now()"
+    },
+    {
+      "tag": "CreateField",
+      "model": "Play",
+      "field": "updatedAt",
+      "type": "DateTime",
+      "arity": "Required"
+    },
+    {
+      "tag": "CreateDirective",
+      "location": {
+        "path": {
+          "tag": "Field",
+          "model": "Play",
+          "field": "updatedAt"
+        },
+        "directive": "updatedAt"
+      }
+    },
+    {
+      "tag": "CreateField",
+      "model": "Play",
+      "field": "deletedAt",
+      "type": "DateTime",
+      "arity": "Required"
+    }
+  ]
+}
