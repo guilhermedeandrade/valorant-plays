@@ -17,8 +17,6 @@ function ensureAuthenticated(
 ): void {
   const authHeader = req.headers.authorization;
 
-  console.log('hey there!');
-
   if (!authHeader) {
     throw new AppError('JWT token is missing', 401);
   }
