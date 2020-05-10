@@ -1,0 +1,26 @@
+{
+  "name": "valorant-plays",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Guilherme de Andrade <guilhermedeandrade@protonmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "rimraf dist && tsc",
+    "dev": "ts-node-dev --transpileOnly --ignore-watch node_modules src/script.ts"
+  },
+  "devDependencies": {
+    "@prisma/cli": "^2.0.0-beta.4",
+    "ts-node-dev": "^1.0.0-pre.44",
+    "@types/node": "^13.13.5",
+    "@typescript-eslint/eslint-plugin": "^2.31.0",
+    "@typescript-eslint/parser": "^2.31.0",
+    "eslint": "^7.0.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.3",
+    "prettier": "^2.0.5",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "@prisma/client": "^2.0.0-beta.4"
+  }
+}
