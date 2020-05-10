@@ -6,3 +6,4 @@
 20200510011502-create_users
 20200510022530-create_plays
 20200510024353-remove_deleted-at_from_play_model
+20200510025132-remove_deleted-at_from_user_model
